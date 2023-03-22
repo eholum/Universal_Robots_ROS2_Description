@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 3.5)
 project(ur_description)
 
 find_package(ament_cmake REQUIRED)
+find_package(ament_cmake_python REQUIRED)
+find_package(rclpy REQUIRED)
 
 install(
   DIRECTORY config launch meshes rviz urdf test
@@ -16,5 +18,14 @@ if(BUILD_TESTING)
   ament_add_pytest_test(ur_urdf_xacro test/test_ur_urdf_xacro.py)
   ament_add_pytest_test(view_ur_launch test/test_view_ur_launch.py)
 endif()
+
+# Install Python executables
+install(PROGRAMS
+        scripts/test_cm_components.py
+        scripts/get_cm_component_state.py
+        DESTINATION lib/${PROJECT_NAME}
+        )
+
+ament_python_install_package(${PROJECT_NAME})
 
 ament_package()
