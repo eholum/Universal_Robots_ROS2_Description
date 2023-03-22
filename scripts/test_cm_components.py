@@ -11,12 +11,13 @@ import sys
 
 
 class SetHardwareComponentStateNode(Node):
-
     def __init__(self):
-        super().__init__('minimal_publisher')
-        self.cli = self.create_client(SetHardwareComponentState, '/controller_manager/set_hardware_component_state')
+        super().__init__("minimal_publisher")
+        self.cli = self.create_client(
+            SetHardwareComponentState, "/controller_manager/set_hardware_component_state"
+        )
         while not self.cli.wait_for_service(timeout_sec=1.0):
-            self.get_logger().info('service not available, waiting again...')
+            self.get_logger().info("service not available, waiting again...")
         self.req = SetHardwareComponentState.Request()
         self.name = ""
         self.target_state = State.PRIMARY_STATE_INACTIVE
@@ -41,5 +42,5 @@ def main(args=None):
     rclpy.shutdown()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
