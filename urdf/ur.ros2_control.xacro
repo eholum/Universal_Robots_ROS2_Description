@@ -77,9 +77,9 @@
         <state_interface name="effort"/>
         <xacro:if value="${sim_ignition}">
           <!-- initial PID values for the IgnitionSystem and simulation -->
-          <param name="p_vel">4000.0</param>
-          <param name="i_vel">250.0</param>
-          <param name="d_vel">1.0</param>
+          <param name="p_vel">100000.0</param>
+          <param name="i_vel">0.0</param>
+          <param name="d_vel">0.0</param>
           <param name="iMax_vel">15.0</param>
           <param name="iMin_vel">-15.0</param>
           <param name="cmdMax_vel">150.0</param>
@@ -104,9 +104,9 @@
         <state_interface name="effort"/>
         <xacro:if value="${sim_ignition}">
           <!-- initial PID values for the IgnitionSystem and simulation -->
-          <param name="p_vel">100000.0</param>
-          <param name="i_vel">1600.0</param>
-          <param name="d_vel">2.5</param>
+          <param name="p_vel">120000.0</param>
+          <param name="i_vel">250.0</param>
+          <param name="d_vel">25.0</param>
           <param name="iMax_vel">45.0</param>
           <param name="iMin_vel">-45.0</param>
           <param name="cmdMax_vel">150.0</param>
@@ -131,9 +131,9 @@
         <state_interface name="effort"/>
         <xacro:if value="${sim_ignition}">
           <!-- initial PID values for the IgnitionSystem and simulation -->
-          <param name="p_vel">10000.0</param>
-          <param name="i_vel">450.0</param>
-          <param name="d_vel">2.0</param>
+          <param name="p_vel">120000.0</param>
+          <param name="i_vel">250.0</param>
+          <param name="d_vel">25.0</param>
           <param name="iMax_vel">30.0</param>
           <param name="iMin_vel">-30.0</param>
           <param name="cmdMax_vel">150.0</param>
@@ -158,8 +158,8 @@
         <state_interface name="effort"/>
         <xacro:if value="${sim_ignition}">
           <!-- initial PID values for the IgnitionSystem and simulation -->
-          <param name="p_vel">3000.0</param>
-          <param name="i_vel">175.0</param>
+          <param name="p_vel">2500.0</param>
+          <param name="i_vel">2.0</param>
           <param name="d_vel">0.5</param>
           <param name="iMax_vel">7.0</param>
           <param name="iMin_vel">-7.0</param>
@@ -186,8 +186,8 @@
         <xacro:if value="${sim_ignition}">
           <!-- initial PID values for the IgnitionSystem and simulation -->
           <param name="p_vel">2500.0</param>
-          <param name="i_vel">150.0</param>
-          <param name="d_vel">0.3</param>
+          <param name="i_vel">2.0</param>
+          <param name="d_vel">0.5</param>
           <param name="iMax_vel">6.0</param>
           <param name="iMin_vel">-6.0</param>
           <param name="cmdMax_vel">28.0</param>
@@ -212,9 +212,9 @@
         <state_interface name="effort"/>
         <xacro:if value="${sim_ignition}">
           <!-- initial PID values for the IgnitionSystem and simulation -->
-          <param name="p_vel">2000.0</param>
-          <param name="i_vel">10.0</param>
-          <param name="d_vel">0.2</param>
+          <param name="p_vel">1500.0</param>
+          <param name="i_vel">0.0</param>
+          <param name="d_vel">0.0</param>
           <param name="iMax_vel">5.0</param>
           <param name="iMin_vel">-5.0</param>
           <param name="cmdMax_vel">28.0</param>
